@@ -2,6 +2,7 @@ from random import seed
 
 from exhaustive import exhaustive
 from utils import create_points, scatter_plot
+from graham import graham
 
 
 def main():
@@ -19,7 +20,8 @@ def main():
     scatter_plot(pts, [[]], title="convex hull : initial set", show=show, save=save)
     print("Points:", pts)
     # compute the hull
-    hull = exhaustive(pts, show=show, save=save)
+    #hull = exhaustive(pts, show=show, save=save)
+    hull = graham(pts)
     print("Hull:", hull)
     scatter_plot(pts, [hull], title="convex hull : final result", show=True, save=save)
 

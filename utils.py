@@ -180,7 +180,7 @@ def distance_from_point_to_line(point, line):
     x2 = line[1][0]
     y2 = line[1][1]
     return abs((y2 - y1) * x0 - (x2 - x1) * y0 + x2 * y1 - y2 * x1) / (
-            distance(line[0], line[1]) ** 2)
+            math.sqrt(distance(line[0], line[1])))
 
 
 def determinant(point1, point2, point3):
