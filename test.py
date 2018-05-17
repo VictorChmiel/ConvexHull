@@ -3,6 +3,7 @@ from random import seed
 from exhaustive import exhaustive
 from utils import create_points, scatter_plot
 from graham import graham
+from jarvis import jarvis
 
 
 def main():
@@ -14,7 +15,7 @@ def main():
     # initialize the random generator seed to always use the same set of points
     seed(0)
     # creates some points
-    pts = create_points(8)
+    pts = create_points(30)
     show = True  # to display a frame
     save = False  # to save into .png files in "figs" directory
     scatter_plot(pts, [[]], title="convex hull : initial set", show=show, save=save)
@@ -22,6 +23,7 @@ def main():
     # compute the hull
     #hull = exhaustive(pts, show=show, save=save)
     hull = graham(pts)
+    #hull = jarvis(pts)
     print("Hull:", hull)
     scatter_plot(pts, [hull], title="convex hull : final result", show=True, save=save)
 
