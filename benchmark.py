@@ -2,6 +2,9 @@ from random import seed
 from time import time
 
 from exhaustive import exhaustive
+from graham import graham
+from jarvis import jarvis
+from eddy_floyd import eddy_floyd
 from utils import *
 
 
@@ -23,7 +26,7 @@ def benchmark(sizes=(10, 100, 1000, 10000, 100000), runs=100, method=exhaustive)
         for _ in range(runs):
             points = create_points(s, 0, max(sizes) * 10)
             t0 = time.time()
-            method(points, False)
+            method(points, show= False)
             tot += (time.time() - t0)
         print("size %d time: %0.5f" % (s, tot / float(runs)))
 
@@ -35,7 +38,7 @@ def main():
     :return: nothing
     """
     seed(0)
-    algorithms = [exhaustive]  # [graham, jarvis, shamos]
+    algorithms = [exhaustive, jarvis, eddy_floyd]  # [graham, jarvis, shamos]
 
     for algorithm in algorithms:
         benchmark(sizes=range(2, 10, 2), runs=10, method=algorithm)

@@ -2,15 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="72737609-8168-4647-80d6-810da5e61242" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/ConvexHull.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/ConvexHull.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/benchmark.py" beforeDir="false" afterPath="$PROJECT_DIR$/benchmark.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/eddy_floyd.py" beforeDir="false" afterPath="$PROJECT_DIR$/eddy_floyd.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/graham.py" beforeDir="false" afterPath="$PROJECT_DIR$/graham.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/jarvis.py" beforeDir="false" afterPath="$PROJECT_DIR$/jarvis.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/shamos.py" beforeDir="false" afterPath="$PROJECT_DIR$/shamos.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/test.py" beforeDir="false" afterPath="$PROJECT_DIR$/test.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/utils.py" beforeDir="false" afterPath="$PROJECT_DIR$/utils.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -20,9 +16,10 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="CoverageDataManager">
-    <SUITE FILE_PATH="coverage/ConvexHull$utils.coverage" NAME="utils Coverage Results" MODIFIED="1528422438741" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/ConvexHull$test.coverage" NAME="test Coverage Results" MODIFIED="1528426335392" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/ConvexHull$Unnamed.coverage" NAME="Eddy Floyd Coverage Results" MODIFIED="1528422443016" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/ConvexHull$benchmark.coverage" NAME="benchmark Coverage Results" MODIFIED="1528437692824" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/ConvexHull$utils.coverage" NAME="utils Coverage Results" MODIFIED="1528434989195" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/ConvexHull$test.coverage" NAME="test Coverage Results" MODIFIED="1528435723622" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/ConvexHull$Unnamed.coverage" NAME="Eddy Floyd Coverage Results" MODIFIED="1528434255105" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/ConvexHull$toDelete.coverage" NAME="toDelete Coverage Results" MODIFIED="1528431494457" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
   <component name="FileEditorManager">
@@ -30,8 +27,8 @@
       <file leaf-file-name="graham.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/graham.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="350">
-              <caret line="34" column="75" lean-forward="true" selection-start-line="34" selection-start-column="75" selection-end-line="34" selection-end-column="75" />
+            <state relative-caret-position="455">
+              <caret line="41" selection-start-line="41" selection-end-line="41" />
             </state>
           </provider>
         </entry>
@@ -39,8 +36,8 @@
       <file leaf-file-name="test.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/test.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="105">
-              <caret line="7" column="20" selection-start-line="7" selection-start-column="20" selection-end-line="7" selection-end-column="20" />
+            <state relative-caret-position="405">
+              <caret line="27" column="5" selection-start-line="27" selection-start-column="5" selection-end-line="27" selection-end-column="5" />
               <folding>
                 <element signature="e#0#23#0" expanded="true" />
               </folding>
@@ -48,11 +45,14 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="shamos.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="shamos.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/shamos.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="240">
-              <caret line="16" lean-forward="true" selection-start-line="16" selection-end-line="16" />
+            <state relative-caret-position="90">
+              <caret line="6" column="12" selection-start-line="6" selection-start-column="12" selection-end-line="6" selection-end-column="12" />
+              <folding>
+                <element signature="e#0#19#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -60,20 +60,8 @@
       <file leaf-file-name="eddy_floyd.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/eddy_floyd.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="350">
-              <caret line="99" column="9" lean-forward="true" selection-start-line="99" selection-start-column="9" selection-end-line="99" selection-end-column="9" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="exhaustive.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/exhaustive.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="390">
-              <caret line="26" column="99" lean-forward="true" selection-start-line="26" selection-start-column="20" selection-end-line="26" selection-end-column="99" />
-              <folding>
-                <element signature="e#0#34#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="410">
+              <caret line="98" column="33" selection-start-line="98" selection-start-column="33" selection-end-line="98" selection-end-column="33" />
             </state>
           </provider>
         </entry>
@@ -81,8 +69,8 @@
       <file leaf-file-name="utils.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/utils.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="801">
-              <caret line="254" column="60" selection-start-line="243" selection-start-column="51" selection-end-line="254" selection-end-column="60" />
+            <state relative-caret-position="201">
+              <caret line="210" column="95" lean-forward="true" selection-start-line="210" selection-start-column="95" selection-end-line="210" selection-end-column="95" />
               <folding>
                 <element signature="e#0#11#0" expanded="true" />
               </folding>
@@ -90,11 +78,14 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="benchmark.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="benchmark.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/benchmark.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="30">
-              <caret line="6" selection-start-line="6" selection-end-line="6" />
+            <state relative-caret-position="600">
+              <caret line="40" column="29" selection-start-line="40" selection-start-column="29" selection-end-line="40" selection-end-column="29" />
+              <folding>
+                <element signature="e#0#23#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -117,11 +108,12 @@
         <option value="$PROJECT_DIR$/graham.py" />
         <option value="$PROJECT_DIR$/exhaustive.py" />
         <option value="$PROJECT_DIR$/jarvis.py" />
-        <option value="$PROJECT_DIR$/utils.py" />
-        <option value="$PROJECT_DIR$/eddy_floyd.py" />
-        <option value="$PROJECT_DIR$/test.py" />
         <option value="$PROJECT_DIR$/toDelete.py" />
         <option value="$PROJECT_DIR$/shamos.py" />
+        <option value="$PROJECT_DIR$/test.py" />
+        <option value="$PROJECT_DIR$/eddy_floyd.py" />
+        <option value="$PROJECT_DIR$/utils.py" />
+        <option value="$PROJECT_DIR$/benchmark.py" />
       </list>
     </option>
   </component>
@@ -134,7 +126,7 @@
   <component name="NodePackageJsonFileManager">
     <packageJsonPaths />
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="-8" />
     <option name="y" value="32" />
     <option name="width" value="892" />
@@ -164,6 +156,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -185,7 +178,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -205,7 +197,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.Eddy Floyd">
+  <component name="RunManager" selected="Python.benchmark">
     <configuration name="Eddy Floyd" type="PythonConfigurationType" factoryName="Python">
       <module name="ConvexHull" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -330,10 +322,10 @@
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.benchmark" />
         <item itemvalue="Python.test" />
         <item itemvalue="Python.utils" />
         <item itemvalue="Python.graham" />
-        <item itemvalue="Python.benchmark" />
         <item itemvalue="Python.exhaustive" />
       </list>
     </recent_temporary>
@@ -359,9 +351,9 @@
       <window_info anchor="bottom" id="Database Changes" order="11" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="1" />
       <window_info anchor="bottom" id="Python Console" order="2" weight="0.32896462" />
-      <window_info anchor="bottom" id="Run" order="6" visible="true" weight="0.29807693" />
+      <window_info anchor="bottom" id="Run" order="6" weight="0.29807693" />
       <window_info anchor="bottom" id="Terminal" order="3" />
-      <window_info active="true" content_ui="combo" id="Project" order="1" visible="true" weight="0.24986508" />
+      <window_info content_ui="combo" id="Project" order="1" visible="true" weight="0.24986508" />
       <window_info anchor="bottom" id="Docker" order="11" show_stripe_button="false" />
       <window_info anchor="right" id="Database" order="3" />
       <window_info anchor="right" id="SciView" order="3" visible="true" weight="0.32973558" />
@@ -732,6 +724,7 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/toDelete.py" />
     <entry file="file://$PROJECT_DIR$/exhaustive.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="390">
@@ -744,56 +737,55 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/test.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="7" column="20" selection-start-line="7" selection-start-column="20" selection-end-line="7" selection-end-column="20" />
+        <state relative-caret-position="405">
+          <caret line="27" column="5" selection-start-line="27" selection-start-column="5" selection-end-line="27" selection-end-column="5" />
           <folding>
             <element signature="e#0#23#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/benchmark.py">
+    <entry file="file://$PROJECT_DIR$/eddy_floyd.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="6" selection-start-line="6" selection-end-line="6" />
+        <state relative-caret-position="410">
+          <caret line="98" column="33" selection-start-line="98" selection-start-column="33" selection-end-line="98" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/shamos.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="6" column="12" selection-start-line="6" selection-start-column="12" selection-end-line="6" selection-end-column="12" />
+          <folding>
+            <element signature="e#0#19#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/graham.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="455">
+          <caret line="41" selection-start-line="41" selection-end-line="41" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/utils.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="801">
-          <caret line="254" column="60" selection-start-line="243" selection-start-column="51" selection-end-line="254" selection-end-column="60" />
+        <state relative-caret-position="201">
+          <caret line="210" column="95" lean-forward="true" selection-start-line="210" selection-start-column="95" selection-end-line="210" selection-end-column="95" />
           <folding>
             <element signature="e#0#11#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/eddy_floyd.py">
+    <entry file="file://$PROJECT_DIR$/benchmark.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="350">
-          <caret line="99" column="9" lean-forward="true" selection-start-line="99" selection-start-column="9" selection-end-line="99" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/graham.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="350">
-          <caret line="34" column="75" lean-forward="true" selection-start-line="34" selection-start-column="75" selection-end-line="34" selection-end-column="75" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/toDelete.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="4" column="9" lean-forward="true" selection-start-line="4" selection-start-column="9" selection-end-line="4" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/shamos.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="16" lean-forward="true" selection-start-line="16" selection-end-line="16" />
+        <state relative-caret-position="600">
+          <caret line="40" column="29" selection-start-line="40" selection-start-column="29" selection-end-line="40" selection-end-column="29" />
+          <folding>
+            <element signature="e#0#23#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
