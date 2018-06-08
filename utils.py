@@ -195,9 +195,7 @@ def determinant(point1, point2, point3):
     :param point3: the third point coordinates as a [x,y] list
     :return: a value >0 if counter-clockwise, <0 if clockwise or =0 if collinear
     """
-    return (point2[0] - point1[0]) * (point3[1] - point1[1]) \
-           - (point2[1] - point1[1]) * (point3[0] - point1[0])
-
+    return (point2[0] - point1[0]) * (point3[1] - point1[1]) - (point2[1] - point1[1]) * (point3[0] - point1[0])
 
 def angle(point1, point2, point3):
     """
@@ -263,3 +261,4 @@ def polar_quicksort(points, anchor):
             larger.append(pt)
     return polar_quicksort(smaller, anchor) + sorted(equal, key=lambda x: distance(x, anchor)) + polar_quicksort(
         larger, anchor)
+

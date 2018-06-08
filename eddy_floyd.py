@@ -3,7 +3,7 @@ from utils import *
 
 def find_start_point(points):
     x_min = float("inf")
-    x_max = 0
+    x_max = float("-inf")
     p_min = []
     p_max = []
     for point in points:
@@ -33,7 +33,7 @@ def next_point(point1, point2, points):
 def sup_line(point1, point2, points):
     points_sup = []
     for point in points:
-        if determinant(point1, point, point2) < 0:
+        if determinant(point1, point2, point) > 0:
             points_sup.append(point)
     return points_sup
 
@@ -41,22 +41,37 @@ def sup_line(point1, point2, points):
 def inf_line(point1, point2, points):
     points_inf = []
     for point in points:
-        if determinant(point1, point, point2) > 0:
+        if determinant(point1, point2, point) < 0:
             points_inf.append(point)
     return points_inf
 
 
+def remove_duplicate(l):
+    final_l = []
+    for ele in l:
+        if ele not in final_l:
+            final_l.append(ele)
+    return final_l
+
+
 def eddy_floyd_rec(points, p_min, p_max):
+    print("pmin = " , p_min , "pmax = " , p_max)
+    print("rec sur points : ", points)
     if points:
         points_sup = sup_line(p_min, p_max, points)
         points_inf = inf_line(p_min, p_max, points)
         point_sup = next_point(p_min, p_max, points_sup)
         point_inf = next_point(p_min, p_max, points_inf)
-        print(point_inf)
+        print("points sup : ", points_sup)
+        print("points inf : ", points_inf)
+        print("point sup : ", point_sup)
+        print("point inf : ", point_inf)
         if len(points_sup) > 1:
             points_sup.pop(points_sup.index(point_sup))
             points_sup_left = sup_line(p_min, point_sup, points_sup)
             points_sup_right = sup_line(point_sup, p_max, points_sup)
+            print("points_sup_left : ",points_sup_left)
+            print("points_sup_right : ", points_sup_right)
         else:
             points_sup_left = []
             points_sup_right = []
@@ -68,17 +83,28 @@ def eddy_floyd_rec(points, p_min, p_max):
             points_inf_left = []
             points_inf_right = []
         if points_sup != [] and points_inf != []:
-            return [p_min] + eddy_floyd_rec(points_sup_left, p_min, p_max) + [point_sup] + eddy_floyd_rec(points_sup_right, p_min, p_max) + [p_max ] + eddy_floyd_rec(points_inf_right, p_min, p_max) + [point_inf] + eddy_floyd_rec(points_inf_left, p_min, p_max)
+            subset = [p_min] + eddy_floyd_rec(points_sup_left, p_min, point_sup) + [point_sup] + eddy_floyd_rec(points_sup_right, point_sup, p_max) + [p_max ] + eddy_floyd_rec(points_inf_right, p_max, point_inf) + [point_inf] + eddy_floyd_rec(points_inf_left, point_inf, p_min)
+            scatter_plot(points, [subset], title="exhaustive search", show=True, save=False)
+            return subset
         elif points_sup != [] and points_inf == []:
-            return eddy_floyd_rec(points_sup_left, p_min, p_max) + [point_sup] + eddy_floyd_rec(points_sup_right, p_min, p_max)
+            subset = [p_min] + eddy_floyd_rec(points_sup_left, p_min, point_sup) + [point_sup] + eddy_floyd_rec(points_sup_right, point_sup, p_max) + [p_max]
+            scatter_plot(points, [subset], title="exhaustive search", show=True, save=False)
+            return subset
         elif points_sup == [] and points_inf != []:
-            return eddy_floyd_rec(points_inf_right, p_min, p_max) + [point_inf] + eddy_floyd_rec(points_inf_left, p_min, p_max)
+            subset =  [p_max] + eddy_floyd_rec(points_inf_right, p_max, point_inf) + [point_inf] + eddy_floyd_rec(points_inf_left, point_inf, p_min) + [p_min]
+            scatter_plot(points, [subset], title="exhaustive search", show=True, save=False)
+            return subset
         else:
             return []
+
     else:
         return []
 
 
 def eddy_floyd(points):
     p_min, p_max = find_start_point(points)
-    return eddy_floyd_rec(points, p_min, p_max)
+    hull = polar_quicksort(eddy_floyd_rec(points, p_min, p_max),[25,25])
+    hull = remove_duplicate(hull)
+    return hull
+
+

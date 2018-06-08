@@ -15,7 +15,7 @@ def next_point(points, point):
     return q
 
 
-def jarvis(points):
+def jarvis(points, show=True, save=False, detailed=False):
     """
 
     :param points: List of point (x,y)
@@ -28,4 +28,11 @@ def jarvis(points):
         q = next_point(points, p)
         if q != hull[0]:
             hull.append(q)
+            if (show or save) and detailed:
+                scatter_plot(points, [hull], title="jarvis search", show=show, save=save)
+            # only consider convex subsets
+            if len(hull) >= 3:
+                if is_convex(hull):
+                    if (show or save) and not detailed:
+                        scatter_plot(points, [hull], title="jarvis search", show=show, save=save)
     return hull

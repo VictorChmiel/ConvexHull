@@ -22,7 +22,7 @@ def start_point(points):
     return point
 
 
-def graham(points):
+def graham(points, show=True, save=False, detailed=False):
     """
 
     :type points: List of point (x,y)
@@ -35,4 +35,11 @@ def graham(points):
         while len(hull) > 1 and determinant(hull[-2], hull[-1], point) < 0:
             hull.pop()
         hull.append(point)
+        if (show or save) and detailed:
+            scatter_plot(points, [hull], title="graham search", show=show, save=save)
+        # only consider convex subsets
+        if len(hull) >= 3:
+            if is_convex(hull):
+                if (show or save) and not detailed:
+                    scatter_plot(points, [hull], title="graham search", show=show, save=save)
     return hull
